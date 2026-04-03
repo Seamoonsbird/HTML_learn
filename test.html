@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>个人博客（侧边栏在左）</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Microsoft Yahei", sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      gap: 25px;
+    }
+
+    header {
+      background: #409eff;
+      color: white;
+      text-align: center;
+      padding: 40px 0;
+      border-radius: 8px;
+      margin: 20px auto;
+      width: 1100px;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 0 auto 25px;
+      width: 1100px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #409eff;
+    }
+
+    .main {
+      flex: 1;
+    }
+
+    .article {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .article h2 {
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .article .meta {
+      color: #999;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .sidebar {
+      width: 300px;
+    }
+
+    .widget {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .widget h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .widget ul {
+      list-style: none;
+    }
+
+    .widget ul li {
+      margin-bottom: 8px;
+    }
+
+    .widget ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .widget ul li a:hover {
+      color: #409eff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #999;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>我的个人博客</h1>
+    <p>记录学习与生活</p>
+  </header>
+
+  <nav>
+    <a href="#">首页</a>
+    <a href="#">文章</a>
+    <a href="#">分类</a>
+    <a href="#">标签</a>
+    <a href="#">关于我</a>
+  </nav>
+
+  <div class="container">
+    <!-- 左边：侧边栏 -->
+    <div class="sidebar">
+      <div class="widget">
+        <h3>关于我</h3>
+        <p>一名前端初学者，喜欢记录学习笔记，分享日常心得。</p>
+      </div>
+
+      <div class="widget">
+        <h3>文章分类</h3>
+        <ul>
+          <li><a href="#">前端学习</a></li>
+          <li><a href="#">日常随笔</a></li>
+          <li><a href="#">技术教程</a></li>
+          <li><a href="#">资源分享</a></li>
+        </ul>
+      </div>
+
+      <div class="widget">
+        <h3>热门标签</h3>
+        <ul>
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">布局</a></li>
+          <li><a href="#">博客</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 右边：文章内容 -->
+    <div class="main">
+      <div class="article">
+        <h2>HTML + CSS 侧边栏布局练习</h2>
+        <div class="meta">2026-03-29 | 分类：前端学习</div>
+        <p>今天用 Flex 布局做了一个带侧边栏的博客页面，结构清晰，非常适合新手练习。</p>
+        <p>先划分头部、导航、主体、侧边栏、底部，再分别写样式，思路会很清楚。</p>
+      </div>
+
+      <div class="article">
+        <h2>坚持每天写一点代码</h2>
+        <div class="meta">2026-03-28 | 分类：日常记录</div>
+        <p>编程没有捷径，多写多练才是王道。哪怕每天只写一小段，长期也会有很大提升。</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 个人博客 | HTML练习专用
+  </footer>
+</body>
+</html>
